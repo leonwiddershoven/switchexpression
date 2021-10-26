@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 enum WeekDay {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }
 
 public class Main {
@@ -80,10 +80,9 @@ public class Main {
         var summary = """
                     The switch _statement_ does not return a value.
                     The switch _statement_ does not need to be exhaustive (e.g. catch all possible cases)
-                    The switch _statement_ always uses :
                     
                     Cases with : are fallthrough in _statement_ and _expression_ form.
-                    Cases with -> do not fallthrough but are only available in the _expression_ form
+                    Cases with -> do not fal lthrough
                     
                     The switch _expression_ does not use break;
                     The switch _expression_ uses no break or yield for one-liners without fallthrough.
@@ -109,16 +108,16 @@ public class Main {
 //        System.out.println("Result was " + result);
 
         var text = """
-         What is pattern matching?
-         
-         Verify that the variable matches some precondition.
-         Then do something with it.        
-         
-         if (a instanceof String s) { ... }
-         
-         a instanceof String is the precondition (test)
-         String s = (String)a; is the action.             
-         """;
+                What is pattern matching?
+                         
+                Verify that the variable matches some precondition.
+                Then do something with it.        
+                         
+                if (a instanceof String s) { ... }
+                         
+                a instanceof String is the precondition (test)
+                String s = (String)a; is the action.             
+                """;
 
 
 //        result = switch (opt) {
@@ -238,7 +237,8 @@ public class Main {
     }
 
     public static void doesnotexist_recordDeconstruction() {
-        record Point(int x, int y) {}
+        record Point(int x, int y) {
+        }
 
         Consumer<Object> fun = (Object o) -> {
             if (o instanceof Point p) {
